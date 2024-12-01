@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ghghghghg</h1>
+    <div id="msgees"></div>
+
+    <input type="text" id="msg" name="" id="" placeholder="enter msg" />
+    <button id="sendBtn" >send</button>
+    <script src="/socket.io/socket.io.js"></script>
+       
+
+     <script>
+        const socket = io();
+
+
+        socket.on('massage', (msg) => {
+        const p = document.createElement("p");
+        p.innerText = msg;
+        allmsgs.appendChild(p);
+        
+      });
+
+      
+      const sendBtn = document.getElementById('sendBtn');
+      const msginput = document.getElementById('msg');
+      const allmsgs = document.getElementById("msgees");
+
+        sendBtn.addEventListener('click', (e) => {
+        const msg = msginput.value;
+        console.log(msg);
+        socket.emit('usermassage', msg);
+      });
+
+    </script>
+   
+</body>
+</html>
