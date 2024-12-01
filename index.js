@@ -23,5 +23,5 @@ app.use(express.static(path.resolve('./public')));
 app.get('/', (req, res) => {
     return res.sendFile('/public/index.html');
 })
-server.listen(9000, () => console.log('start'));
+server.listen(8000, () => console.log('start'));
    

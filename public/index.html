@@ -4,12 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      .container{
+        background-color: white;
+        height: 300px;
+        width: 100%;
+        font-size: 30px;
+        font-weight: 300;
+        font-style: italic;
+        color: red;
+        overflow: scroll;
+        border: 2px solid blue;
+        border-style: dotted;
+        
+      }
+      button{
+        background-color: red;
+        height: 35px;
+        width: 100px;
+        border: hidden;
+        color: white;
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+      input{
+        height: 30px;
+        width: 200px;
+
+      }
+    </style>
 </head>
 <body>
     <h1>Chat App</h1>
-    <div id="msgees"></div>
+    <h2><p><i>Simple <font color="blue">chat applictaion</font></i></p></h2>
+    <center><div class="container">
+      <br><br>
+      <div id="msgees"></div>
+    </div></center>
+    <br>
 
-    <input type="text" id="msg" name="" id="" placeholder="enter msg" />
+    <input type="text" id="msg">
+    
     <button id="sendBtn" >send</button>
     <script src="/socket.io/socket.io.js"></script>
        
